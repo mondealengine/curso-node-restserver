@@ -14,7 +14,7 @@ const usuariosGet = async (req, res = response) => {
 
   res.json({
     total,
-    usuarios
+    usuarios,
   });
 };
 
@@ -54,17 +54,14 @@ const usuariosPatch = (req, res) => {
 };
 
 const usuariosDelete = async (req, res) => {
+  const id = req.params.id;
 
-  const id = req.params.id
-  
   //borrar físicamente de la BD
   // const usuario = await Usuario.findByIdAndDelete(id);
 
-  const usuario = await Usuario.findByIdAndUpdate(id, {estado: false});
+  const usuario = await Usuario.findByIdAndUpdate(id, { estado: false });
 
-  res.json(
-    usuario
-  );
+  res.json(usuario);
 };
 
 module.exports = {

@@ -1,5 +1,10 @@
 const { Schema, model } = require("mongoose");
 
+/**
+* @type {mongoose.SchemaDefinitionProperty}
+*/
+
+
 const UsuarioSchema = Schema({
   nombre: {
     type: String,

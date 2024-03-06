@@ -42,8 +42,6 @@ const usuariosPut = async (req, res) => {
   }
 
   const usuario = await Usuario.findByIdAndUpdate(id, resto, { new: true });
-  // console.log(usuario);
-
   res.json(usuario);
 };
 
